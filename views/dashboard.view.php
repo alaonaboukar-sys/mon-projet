@@ -16,6 +16,23 @@
 </head>
 <body>
     <h1><?php echo $titre; ?></h1>
+        <!-- Le formulaire qui envoie les données en méthode POST -->
+    <form method="POST" action="" style="margin-bottom: 30px; background: white; padding: 20px; display: inline-block; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <label>Type :</label>
+        <select name="type" required>
+            <option value="Revenu">Revenu</option>
+            <option value="Depense">Dépense</option>
+        </select>
+        
+        <label>Libellé :</label>
+        <input type="text" name="libelle" placeholder="Ex: Achat café" required>
+        
+        <label>Montant :</label>
+        <input type="number" step="0.01" name="montant" placeholder="Ex: 15.50" required>
+        
+        <!-- Le bouton qui déclenche l'envoi -->
+        <button type="submit" style="padding: 10px 15px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer;">Ajouter</button>
+    </form>
     <p>Voici vos dernières opérations :</p>
 
     <table>
